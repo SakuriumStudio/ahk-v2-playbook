@@ -1,23 +1,31 @@
-# 📘 AutoHotkey v2 Playbook
 
-AutoHotkey v2.0.x Stable 向けの環境構築・デバッグ・確認・回避策までを体系的に整理した実践ガイドです。
+# AHK v2 Playbook
 
-## 📂 セットアップ手順と落とし穴
-- [環境構築ガイド](setup/environment_setup.md)  
-  └ Windows 10/11 対応。インストール手順、併存対応、エディタ・デバッグ連携など。
-- [よくある落とし穴とその対策](setup/pitfalls_and_fixes.md)  
-  └ 管理者権限/UAC、ゲーム環境、IME干渉、Sendモードなど詳細な再現条件・対策付き。
+AutoHotkey v2.x に関するセットアップ手順、動作検証スクリプト、よくある問題とその対処法を収録したプレイブックです。
 
-## ✅ 動作確認チェックリスト
-- [検証用チェックリスト](checklist/verify_checklist.md)  
-  └ スクリプトの最短動作確認、ログ出力、アクティブウィンドウ取得のポイント付き。
+## 📁 ディレクトリ構成
 
-## 🛠 デバッグと調査のヒント
-- [詰まり解消フローチャート](debug/debug_flowchart.md)  
-  └ ホットキーが効かない、Sendが通らない… その原因を順に潰すための判断手順。
-- [デバッグヒント集](debug/debug_tips.md)  
-  └ WindowSpy, DBGView, メッセージログなど活用の長所・短所。
+```
+ahk-v2-playbook/
+├── setup/
+│   ├── AutoHotkey v2.0.x 安定版の環境セットアップガイド.docx
+│   └── AutoHotkey v2.0.xでよくある落とし穴.docx
+├── tools/
+│   └── AutoHotkey v2 実行環境検証ツール.docx
+└── README.md
+```
 
-## 🔧 ツール・スニペット
-- [`runtime_verifier.ahk`](tools/runtime_verifier.ahk)  
-  └ AHK v2動作判定、キー入力検知、アクティブウィンドウログ出力など単体で動作するスクリプト。
+## 📌 内容紹介
+
+| カテゴリ | 概要 | ファイル |
+|---------|------|---------|
+| セットアップ | AHK v2.0.x の導入と推奨設定手順 | `setup/AutoHotkey v2.0.x 安定版の環境セットアップガイド.docx` |
+| 落とし穴 | 管理者権限やIME、ゲーム環境などの問題と対処 | `setup/AutoHotkey v2.0.xでよくある落とし穴.docx` |
+| 検証ツール | スクリプト環境の正常性チェック用コード | `tools/AutoHotkey v2 実行環境検証ツール.docx` |
+
+## 🔍 今後のディープリサーチ候補
+
+- Send/Hotkey の低レベル干渉の診断方法とログ取得
+- AHKHID / RawInput を使った高度な入力制御
+- IMEの完全制御と状態復元スクリプトの定式化
+- 環境別最適Sendモード診断と切り替えスクリプト
